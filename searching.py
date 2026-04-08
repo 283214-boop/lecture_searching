@@ -21,22 +21,32 @@ def read_data(file_name, field):
     cwd_path = Path.cwd()
     
     file_path = cwd_path / file_name
+
 def read_data(hodnoty,klic):
+    if klic in hodnoty==False:
+        return None
 
     with open(hodnoty,"r") as file:
             data= json.load(file)
-    if klic not in hodnoty:
-        return None
-
     return data[klic]
 
+def linear_search(sekvence,number):
+    position=[]
+    for index, x in enumerate(sekvence):
+        if x == number:
+            position.append(index)
+    y = sekvence.count(number)
 
-
-
+    sl = {"positions": position,
+            "count": y}
+    return sl
+def
 
 def main():
-    sequential_data = read_data("sequential.json","sas")
-    print (sequential_data)
+    sequential_data = read_data("sequential.json","unordered_numbers")
+    print(sequential_data)
+    pocet_cyklu = linear_search(sequential_data, 20)
+    print (pocet_cyklu)
 
 if __name__ == "__main__":
     main()
