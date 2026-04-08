@@ -22,18 +22,20 @@ def read_data(file_name, field):
     
     file_path = cwd_path / file_name
 def read_data(hodnoty,klic):
-    if klic in hodnoty==False:
-        return None
 
     with open(hodnoty,"r") as file:
             data= json.load(file)
+    if klic not in hodnoty:
+        return None
+
     return data[klic]
 
 
 
 
+
 def main():
-    sequential_data = read_data("sequential.json","unordered_numbers")
+    sequential_data = read_data("sequential.json","sas")
     print (sequential_data)
 
 if __name__ == "__main__":
