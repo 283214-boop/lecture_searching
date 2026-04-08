@@ -44,7 +44,11 @@ def linear_search(sekvence,number):
 def binary_search(seznam,cislo):
     mislo=[]
     lev = 0
-    prva
+    prva = 2//(len(seznam))
+
+
+def pattern_search(sekvence,vzorek):
+
 
 import time
 start = time.perf_counter()
