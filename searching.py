@@ -40,13 +40,24 @@ def linear_search(sekvence,number):
     sl = {"positions": position,
             "count": y}
     return sl
-def
 
+def binary_search(seznam,cislo):
+    mislo=[]
+    lev = 0
+    prva
+
+import time
+start = time.perf_counter()
 def main():
     sequential_data = read_data("sequential.json","unordered_numbers")
     print(sequential_data)
     pocet_cyklu = linear_search(sequential_data, 20)
     print (pocet_cyklu)
 
+    end = time.perf_counter()
+    duration = end - start
+    print(f"Měření trvalo {duration:.8f} s")
+
 if __name__ == "__main__":
     main()
+
